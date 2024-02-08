@@ -1,0 +1,64 @@
+JavaScriptda stringlar (matnlar) bilan ishlash uchun bir nechta metodlar mavjud. Bu metodlar matnlar ustida turli xil operatsiyalarni bajarishga yordam beradi. Quyidagi konspekt string metodlarining qisqacha izohlari:
+
+length: Matndagi belgilar sonini qaytaradi.
+
+javascript
+Copy code
+let text = "Hello, world!";
+console.log(text.length); // 13
+charAt(index): Berilgan indeksdagi belgini qaytaradi.
+
+javascript
+Copy code
+let text = "Hello";
+console.log(text.charAt(1)); // e
+concat(string2, string3, ...): Matnga bir nechta matn qo'shadi va yangi matnni qaytaradi.
+
+javascript
+Copy code
+let text1 = "Hello";
+let text2 = " world";
+console.log(text1.concat(text2)); // Hello world
+toUpperCase(): Matndagi barcha harflarni katta harfda qaytaradi.
+
+javascript
+Copy code
+let text = "hello";
+console.log(text.toUpperCase()); // HELLO
+toLowerCase(): Matndagi barcha harflarni kichik harfda qaytaradi.
+
+javascript
+Copy code
+let text = "HELLO";
+console.log(text.toLowerCase()); // hello
+indexOf(substring, startIndex): Berilgan qismni birinchi topilgan joyini qaytaradi. Agar topilmasa, -1 qaytaradi.
+
+javascript
+Copy code
+let text = "Hello, world!";
+console.log(text.indexOf("world")); // 7
+substring(startIndex, endIndex): Berilgan indekslar orasidagi qismni qaytaradi. endIndex har xilirida tugashi kerak bo'lgan indeksni anglatadi (bu indeks qaytarilmaydi).
+
+javascript
+Copy code
+let text = "Hello, world!";
+console.log(text.substring(7, 12)); // world
+replace(oldSubstring, newSubstring): Matndagi birinchi topilgan oldSubstring ni newSubstring bilan almashtiradi.
+
+javascript
+Copy code
+let text = "Hello, world!";
+console.log(text.replace("world", "earth")); // Hello, earth!
+split(separator): Matnni ayirgich bo'yicha bo'lib, massivga aylantiradi.
+
+javascript
+Copy code
+let text = "apple,banana,orange";
+console.log(text.split(",")); // ["apple", "banana", "orange"]
+trim(): Matndagi bo'sh joylarni olib tashlaydi.
+
+javascript
+Copy code
+let text = "   Hello, world!   ";
+console.log(text.trim()); // Hello, world!
+Bu konspekt, JavaScriptda keng foydalaniladigan bir qancha string metodlarini kengaytirish uchun yaxshi bir boshlang'ich nuqtani taqdim etadi. Raqamli matnlardan olingan boshqa metodlar, RegExp bilan ishlash va boshqalar mavjud, ammo ularning ko'pligi ko'p vaqtga ega bo'lgan tartibda kerak bo'ladi.
